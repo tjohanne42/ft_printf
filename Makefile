@@ -1,14 +1,16 @@
-#******************************************************************************#
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: tjohanne <marvin@42.fr>                    +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2018/08/17 13:22:33 by tjohanne          #+#    #+#              #
-#    Updated: 2018/08/17 13:22:33 by tjohanne         ###   ########.fr        #
-#                                                                              #
-#******************************************************************************#
+C_STANDART = \033[0m
+C_GRAS = \033[1m
+C_SOULIGN = \033[4m
+C_CLIGN = \033[5m
+C_SURLIGN = \033[7m
+C_BLACK = \033[30m
+C_RED = \033[31m
+C_GREEN = \033[32m
+C_YELLOW = \033[33m
+C_BLUE = \033[34m
+C_PINK = \033[35m
+C_CYAN = \033[36m
+C_GREY = \033[37m
 
 NAME = libftprintf.a
 
@@ -52,17 +54,15 @@ $(NAME):
 	$(addprefix $(SRCFLAGDIR), $(SRCFLAG)) $(addprefix $(LIBFTDIR), $(LIBFTSRC))
 	@ ar -rc $(NAME) $(OBJ)
 	@ ranlib $(NAME)
-	@ echo "\033[33;32mCompilation libftprintf.a\t\t\tDONE"
+	@ echo -e "\033[0m==\tCompilation libftprintf.a\t\t\t\033[1;32mDONE$(C_STANDART)"
 
 clean:
-	@ make clean -C libft
 	@ rm -f $(OBJ)
-	@ echo "\033[33;32mClean objects libftprintf.a\t\t\tDONE"
+	@ echo -e "\033[0m==\tClean objects libftprintf.a\t\t\t\033[1;32mDONE$(C_STANDART)"
 
 fclean: clean
-	@ make fclean -C libft
 	@ rm -f $(NAME)
-	@ echo "\033[33;32mClean library libftprintf.a\t\t\tDONE"
+	@ echo -e "\033[0m==\tClean library libftprintf.a\t\t\t\033[1;32mDONE$(C_STANDART)"
 
 re: fclean all
 
