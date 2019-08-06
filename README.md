@@ -2,6 +2,8 @@ ft_printf subject FR : (https://github.com/koloux/ft_printf/blob/master/subject/
 
 usage exemple :
 
+input : make
+output : 
 #include "inc/ft_printf.h"
 
 int		main(void)
