@@ -9,6 +9,6 @@ int		main(void)
 	// man setlocale
 	if (!setlocale(LC_ALL, ""))
 		return (0);
-	ft_printf("†ïàé\n");
+	ft_printf("ls\n", "†ïàé");
 	return (0);
 }
